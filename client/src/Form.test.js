@@ -18,20 +18,19 @@ describe("<Display />", () => {
   });
 
   it("should render a list of players provided on props", () => {
-    let { getAllByTestId, getAllByText } = render(<User />);
+    let { FindAllByText, getAllByText } = render(<ClientFormik />);
 
-    const element = getAllByText(/ Brisket/i);
-    expect(element).toBeInTheDocument();
+    FindAllByText(/Client Form /i);
+    
   });
 
   it("renders strike numbers", () => {
-    let { findAllByText, getByText }= render(<ClientFormik />);
-    let { getAllByTestId } = render(<User />);
+    let { FindAllByText, getByText }= render(<ClientFormik />);
     let button = getByText(/Submit/)
-    let Food =getAllByTestId(/Food/)
+
     
     fireEvent.click(button);
-    expect(User).toHaveLength(Food.length)
+    FindAllByText(/Username is needed!/)
 
   });
 

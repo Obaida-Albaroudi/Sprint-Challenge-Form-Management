@@ -54,8 +54,8 @@ const ClientForm = ({errors, touched, values, status}) =>{
 
                 <Form >
                     <Field type="text" name="Username" placeholder="Username"/>
-                    {touched.Name && errors.Name && (
-                        <p>{errors.Name}</p>
+                    {touched.Username && errors.Username && (
+                        <p>{errors.Username}</p>
                     )}<br></br>
                     
                     <Field type="password" name="Password" placeholder="Password"/>
