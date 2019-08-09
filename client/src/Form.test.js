@@ -17,6 +17,13 @@ describe("<Display />", () => {
     render(<ClientFormik />);
   });
 
+  it("should render a list of players provided on props", () => {
+    let { getAllByTestId, getAllByText } = render(<User />);
+
+    const element = getAllByText(/ Brisket/i);
+    expect(element).toBeInTheDocument();
+  });
+
   it("renders strike numbers", () => {
     let { findAllByText, getByText }= render(<ClientFormik />);
     let { getAllByTestId } = render(<User />);
@@ -27,12 +34,7 @@ describe("<Display />", () => {
     expect(User).toHaveLength(Food.length)
 
   });
-  it("should render a list of players provided on props", () => {
-    let { getAllByTestId, getByText } = render(<User />);
 
-    const element = getByText(/ Pending.../i);
-    expect(User).toBe(element);
-  });
 
   
   

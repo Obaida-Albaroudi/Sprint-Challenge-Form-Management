@@ -69,8 +69,9 @@ const ClientForm = ({errors, touched, values, status}) =>{
 
             </StyleFlexForm>
 
-
-            <User props={get}/>
+            {get.length >1 &&
+                <User props={get}/>
+            }
 
 
         </>
