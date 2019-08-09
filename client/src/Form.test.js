@@ -18,19 +18,19 @@ describe("<Display />", () => {
   });
 
   it("should render a list of players provided on props", () => {
-    let { FindAllByText, getAllByText } = render(<ClientFormik />);
+    let { findAllByText, getAllByText } = render(<ClientFormik />);
 
-    FindAllByText(/Client Form /i);
+    findAllByText(/Client Form /i);
     
   });
 
   it("renders strike numbers", () => {
-    let { FindAllByText, getByText }= render(<ClientFormik />);
+    let { findAllByText, getByText }= render(<ClientFormik />);
     let button = getByText(/Submit/)
 
     
     fireEvent.click(button);
-    FindAllByText(/Username is needed!/)
+    findAllByText(/Username is needed!/)
 
   });
 
